@@ -1,7 +1,9 @@
 "use client";
 
-import { ArrowUpRight, GitBranch } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowUpRight} from "lucide-react";
+import {
+  siGithub,
+} from "simple-icons";
 import { stackIcons, type Project } from "@/data/projects";
 import { ProjectPreview } from "./project-preview";
 
@@ -55,17 +57,26 @@ export function ProjectCard({ project }: { project: Project }) {
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
-  {project.github ? (
-    <a
-      href={project.github}
-      target="_blank"
-      rel="noreferrer"
-      className="inline-flex h-9 cursor-pointer items-center justify-center gap-2 rounded-lg border border-border bg-background px-3 text-sm font-medium transition-colors hover:bg-muted"
+ {project.github ? (
+  <a
+    href={project.github}
+    target="_blank"
+    rel="noreferrer"
+    className="inline-flex h-9 cursor-pointer items-center justify-center gap-2 rounded-lg border border-border bg-background px-3 text-sm font-medium transition-all duration-300 hover:border-[#FDAD04]/40 hover:bg-[#FDAD04]/5"
+  >
+    <svg
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      className="size-4 fill-current"
+      aria-label="GitHub"
     >
-      <GitBranch className="size-4" />
-      GitHub
-    </a>
-  ) : null}
+      <path d={siGithub.path} />
+    </svg>
+
+    GitHub
+  </a>
+) : null}
 
   {project.demo ? (
     <a

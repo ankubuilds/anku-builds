@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Anku Builds</title>
+  <desc id="desc">Anku Builds AB favicon</desc>
+  <rect width="512" height="512" rx="112" fill="#FDAD04"/>
+  <path d="M72 392 256 72l184 320H334l-39-78h-78l-40 78H72Zm184-222-57 104h114l-57-104Z" fill="#050505"/>
+  <path d="M278 72h72c61 0 101 31 101 79 0 29-16 52-43 65 35 13 54 40 54 74 0 66-48 102-125 102h-59V72Zm61 63v54h31c26 0 42-10 42-28 0-17-16-26-42-26h-31Zm0 113v61h39c29 0 47-11 47-31 0-19-18-30-47-30h-39Z" fill="#050505"/>
+</svg>

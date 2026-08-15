@@ -6,7 +6,7 @@ import { HeroTerminal } from "./hero-terminal";
 
 export function Hero() {
   return (
-    <section className="relative isolate flex min-h-[calc(100svh-2rem)] items-center overflow-hidden">
+    <section  id="home" className="relative isolate flex min-h-[calc(100svh-2rem)] items-center overflow-hidden">
       <HeroBackground />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-10">

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-labelledby="title desc">
+<title id="title">Anku Builds</title>
+<desc id="desc">Anku Builds footer logo with theme-aware foreground colors</desc>
+<style>
+  .ink { fill:#111111; }
+  .gold { fill:#FDAD04; }
+  .line { stroke:#FDAD04; }
+  @media (prefers-color-scheme: dark) {
+    .ink { fill:#FFFFFF; }
+  }
+</style>
+<g transform="translate(8 16)">
+  <path class="gold" d="M0 82 48 8l48 74H72L48 43 25 82Z"/>
+  <path class="ink" d="M55 8h35c20 0 30 10 30 25 0 9-4 16-11 20 9 4 14 11 14 21 0 17-12 26-33 26H55l20-30h15c5 0 8-2 8-6 0-4-3-6-8-6H75L55 28h35c4 0 7-2 7-6 0-4-3-6-7-6H55Z"/>
+</g>
+<line class="line" x1="145" y1="18" x2="145" y2="102" stroke-width="3"/>
+<text x="170" y="54" class="ink" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="800" letter-spacing="1">ANKU</text>
+<text x="170" y="87" class="gold" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="900" letter-spacing="1">BUILDS</text>
+</svg>
