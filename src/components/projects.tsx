@@ -8,7 +8,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative isolate overflow-hidden border-t border-border/50 py-24 sm:py-28 lg:py-32"
+      className="relative isolate overflow-hidden border-t border-border/50 py-24 sm:py-28 lg:py-24"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(253,173,4,0.08),transparent_32%)]" />
 
