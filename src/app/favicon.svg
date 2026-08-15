@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Anku Builds AB Logo Mark</title>
+  <desc>Geometric AB monogram in Anku Builds brand colors.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- A -->
+    <path d="M54 388 211 92l157 296h-76l-81-158-82 158Z"
+          fill="#FDAD04" stroke="#FDAD04" stroke-width="8"/>
+    <path d="m173 306 38-72 38 72Z"
+          fill="#050505" stroke="#050505" stroke-width="6"/>
+    <!-- B -->
+    <path d="M245 92h94c62 0 91 30 91 71 0 29-16 49-43 59 35 8 56 31 56 67 0 61-43 99-111 99h-87V92Zm68 58v58h25c19 0 30-10 30-29 0-19-12-29-31-29h-24Zm0 116v64h30c25 0 39-11 39-32 0-21-14-32-39-32h-30Z"
+          fill="#FFFFFF" stroke="#FFFFFF" stroke-width="5"/>
+  </g>
+</svg>

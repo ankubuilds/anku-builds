@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 360">
+  <title>Anku Builds Horizontal Logo</title>
+  <desc>Anku Builds horizontal brand logo in black, white and gold.</desc>
+
+  <g transform="translate(35 40) scale(.54)">
+    <path d="M54 388 211 92l157 296h-76l-81-158-82 158Z"
+          fill="#FDAD04"/>
+    <path d="m173 306 38-72 38 72Z" fill="#050505"/>
+    <path d="M245 92h94c62 0 91 30 91 71 0 29-16 49-43 59 35 8 56 31 56 67 0 61-43 99-111 99h-87V92Zm68 58v58h25c19 0 30-10 30-29 0-19-12-29-31-29h-24Zm0 116v64h30c25 0 39-11 39-32 0-21-14-32-39-32h-30Z"
+          fill="#FFFFFF"/>
+  </g>
+
+  <rect x="265" y="72" width="4" height="216" rx="2" fill="#FDAD04"/>
+
+  <text x="315" y="154"
+        font-family="'Space Grotesk', Arial, sans-serif"
+        font-size="86" font-weight="700" letter-spacing="1"
+        fill="#FFFFFF">ANKU</text>
+
+  <text x="315" y="238"
+        font-family="'Space Grotesk', Arial, sans-serif"
+        font-size="86" font-weight="700" letter-spacing="1"
+        fill="#FDAD04">BUILDS</text>
+
+  <text x="318" y="292"
+        font-family="Inter, Arial, sans-serif"
+        font-size="20" font-weight="600" letter-spacing="7"
+        fill="#FFFFFF">CODE • CREATE • DEPLOY</text>
+</svg>
