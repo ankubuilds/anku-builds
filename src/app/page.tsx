@@ -1,11 +1,12 @@
 import { Hero } from "@/components/hero/hero";
-import { ThemeToggle } from "@/components/theme-toggle";
-import Image from "next/image";
+import { Projects } from "@/components/projects";
+
 
 export default function Home() {
   return (
     <main>
       <Hero />
+      <Projects />
     </main>
   );
 }
