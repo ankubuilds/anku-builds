@@ -7,14 +7,22 @@ import {
 import { stackIcons, type Project } from "@/data/projects";
 import { ProjectPreview } from "./project-preview";
 
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({
+  project,
+  index,
+  total,
+}: {
+  project: Project;
+  index: number;
+  total: number;
+}) {
   return (
     <article className="group relative overflow-hidden rounded-3xl border border-border/60 bg-card/70 shadow-2xl shadow-black/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-[#FDAD04]/40 hover:shadow-[#FDAD04]/10 dark:shadow-black/20">
       <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
         <div className="relative min-h-[360px] overflow-hidden border-b border-border/60 bg-muted/20 p-5 sm:p-7 lg:border-b-0 lg:border-r">
           <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#FDAD04]/10 blur-3xl transition-transform duration-700 group-hover:scale-125" />
 
-          <ProjectPreview />
+         <ProjectPreview project={project} />
         </div>
 
         <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
@@ -24,8 +32,9 @@ export function ProjectCard({ project }: { project: Project }) {
             </span>
 
             <span className="font-mono text-[10px] text-muted-foreground">
-              01 / 01
-            </span>
+  {String(index + 1).padStart(2, "0")} /{" "}
+  {String(total).padStart(2, "0")}
+</span>
           </div>
 
           <h3 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl">

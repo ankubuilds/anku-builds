@@ -33,9 +33,14 @@ export function Projects() {
         </div>
 
         <div className="space-y-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
+          {projects.map((project, index) => (
+  <ProjectCard
+    key={project.title}
+    project={project}
+    index={index}
+    total={projects.length}
+  />
+))}
         </div>
 
         <div className="mt-10 flex items-center gap-3 font-mono text-[10px] tracking-[0.18em] text-muted-foreground uppercase">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { Project } from "@/data/projects";
 
 const stats = [
   { label: "APPLICATIONS", value: "248" },
@@ -10,7 +11,19 @@ const stats = [
 
 const bars = [35, 52, 42, 68, 57, 78, 64, 88, 72, 94];
 
-export function ProjectPreview() {
+export function ProjectPreview({ project }: { project: Project }) {
+  if (project.preview.type === "story") {
+    return <StillPreview />;
+  }
+
+  return <SmartRidePreview />;
+}
+
+/* =========================================================
+   SMART RIDE PREVIEW
+   ========================================================= */
+
+function SmartRidePreview() {
   const [activeBar, setActiveBar] = useState(bars.length - 1);
 
   useEffect(() => {
@@ -43,6 +56,7 @@ export function ProjectPreview() {
         <aside className="border-r border-border/60 bg-muted/20 p-3">
           <div className="mb-7 flex items-center gap-1.5">
             <span className="size-2 rounded-full bg-[#FDAD04]" />
+
             <span className="hidden font-mono text-[8px] font-semibold tracking-wider text-foreground sm:block">
               SMART
             </span>
@@ -63,6 +77,7 @@ export function ProjectPreview() {
 
             <div className="mt-2 flex items-center gap-1.5">
               <span className="size-1.5 animate-pulse rounded-full bg-[#FDAD04]" />
+
               <span className="hidden font-mono text-[7px] text-[#FDAD04] sm:block">
                 ONLINE
               </span>
@@ -105,6 +120,7 @@ export function ProjectPreview() {
 
                 <div className="mt-1 flex items-center gap-1">
                   <span className="text-[7px] text-[#FDAD04]">↑</span>
+
                   <span className="font-mono text-[6px] text-muted-foreground">
                     {index === 0 ? "12%" : index === 1 ? "4%" : "18%"}
                   </span>
@@ -163,6 +179,7 @@ export function ProjectPreview() {
                 <div className="font-heading text-[10px] font-medium">
                   Concession Application
                 </div>
+
                 <div className="mt-1 font-mono text-[7px] text-muted-foreground">
                   APPLICATION #SR-0248
                 </div>
@@ -172,6 +189,7 @@ export function ProjectPreview() {
                 <div className="font-mono text-[8px] text-muted-foreground">
                   TODAY
                 </div>
+
                 <div className="mt-1 font-mono text-[7px] text-[#FDAD04]">
                   APPROVED
                 </div>
@@ -183,6 +201,96 @@ export function ProjectPreview() {
     </div>
   );
 }
+
+/* =========================================================
+   STILL — 10 YEAR STORY PREVIEW
+   ========================================================= */
+
+function StillPreview() {
+  const petals = [
+    { left: "8%", top: "15%", rotate: "-25deg", size: "18px" },
+    { left: "20%", top: "72%", rotate: "30deg", size: "12px" },
+    { left: "80%", top: "18%", rotate: "15deg", size: "14px" },
+    { left: "88%", top: "70%", rotate: "-20deg", size: "18px" },
+    { left: "48%", top: "10%", rotate: "45deg", size: "10px" },
+    { left: "68%", top: "82%", rotate: "-35deg", size: "11px" },
+  ];
+
+  return (
+    <div className="relative h-full min-h-[320px] overflow-hidden rounded-2xl border border-border/60 bg-background shadow-xl">
+      {/* Ambient background */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(253,173,4,0.08),transparent_55%)]" />
+
+      {/* Decorative petals */}
+      {petals.map((petal, index) => (
+        <span
+          key={index}
+          className="absolute rounded-[70%_30%_70%_30%] bg-[#FDAD04]/15"
+          style={{
+            left: petal.left,
+            top: petal.top,
+            width: petal.size,
+            height: petal.size,
+            transform: `rotate(${petal.rotate})`,
+          }}
+        />
+      ))}
+
+      {/* Window header */}
+      <div className="relative z-10 flex h-10 items-center justify-between border-b border-border/60 px-4">
+        <div className="flex gap-1.5">
+          <span className="size-2 rounded-full bg-red-400/70" />
+          <span className="size-2 rounded-full bg-yellow-400/70" />
+          <span className="size-2 rounded-full bg-green-400/70" />
+        </div>
+
+        <span className="font-mono text-[8px] tracking-[0.2em] text-muted-foreground uppercase">
+          still / our story
+        </span>
+
+        <span className="w-8" />
+      </div>
+
+      {/* Story content */}
+      <div className="relative z-10 flex h-[calc(100%-40px)] flex-col items-center justify-center px-6 text-center">
+        <span className="font-mono text-[7px] tracking-[0.35em] text-[#FDAD04] uppercase sm:text-[8px]">
+          A LITTLE STORY ABOUT US
+        </span>
+
+        <h4 className="mt-4 font-serif text-4xl font-medium tracking-tight text-foreground sm:text-5xl">
+          10 Years
+        </h4>
+
+        <span className="mt-3 h-px w-10 bg-[#FDAD04]" />
+
+        <p className="mt-5 text-[10px] leading-5 text-muted-foreground sm:text-xs">
+          So many memories.
+          <br />
+          So many versions of us.
+        </p>
+
+        <p className="mt-5 font-serif text-lg italic text-foreground/80 sm:text-xl">
+          And somehow...
+        </p>
+
+        <h5 className="mt-1 font-serif text-4xl font-semibold tracking-tight text-[#FDAD04] sm:text-5xl">
+          Still You.
+        </h5>
+
+        <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-border/70 px-4 py-2 text-[9px] text-muted-foreground transition-all duration-300 group-hover:border-[#FDAD04]/50 group-hover:bg-[#FDAD04]/5 group-hover:text-foreground">
+          Begin our story
+          <span className="text-[#FDAD04]">→</span>
+        </div>
+      </div>
+
+      {/* Ambient glow */}
+      <div className="absolute bottom-[-40px] left-1/2 h-32 w-64 -translate-x-1/2 rounded-full bg-[#FDAD04]/10 blur-3xl" />
+    </div>
+  );
+}
+/* =========================================================
+   SIDEBAR ITEM
+   ========================================================= */
 
 function SidebarItem({
   label,
